@@ -1,6 +1,10 @@
 from django.urls import path
 from . import views
 
+from django.contrib.sitemaps.views import sitemap
+from blog.sitemaps import PostSitemap
+
+
 app_name = 'blog'
 
 
