@@ -8,11 +8,13 @@ from django.core.mail import send_mail
 
 
 from .models import Post, Comment
-from .forms import EmailPostForm, CommentForm
+from .forms import EmailPostForm, CommentForm, SearchForm
 
 from taggit.models import Tag
 
 from django.db.models import Count
+
+from django.contrib.postgres.search import SearchVector
 
 
 def post_list(request, tag_slug=None):
@@ -140,3 +142,28 @@ def post_share(request, post_id):
     return render(request, 'blog/post/share.html', {'post': post,
                                                     'form': form,
                                                     'sent': sent})
+
+
+def post_search(request):
+
+    form = SearchForm()
+    query = None
+    results = []
+    
+    if 'query' in request.GET:
+
+        form = SearchForm(request.GET)
+        
+        if form.is_valid():
+        
+            query = form.cleaned_data['query']
+        
+            results = Post.published.annotate(
+                                search=SearchVector('title', 'body'),
+                            ).filter(search=query)
+    
+    return render(request,
+                  'blog/post/search.html',
+                  {'form': form,
+                   'query': query,
+                   'results': results})
