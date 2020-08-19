@@ -115,3 +115,4 @@ media/
 cert.crt 
 cert.key
 secret_keys.txt
+myshop/secrete.txt
