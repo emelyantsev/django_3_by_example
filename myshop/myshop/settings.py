@@ -123,6 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
@@ -134,9 +135,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 # Braintree settings
-BRAINTREE_MERCHANT_ID = ''  # Merchant ID
-BRAINTREE_PUBLIC_KEY = ''   # Public Key
-BRAINTREE_PRIVATE_KEY = ''  # Private key
+BRAINTREE_MERCHANT_ID = 'xyj6k6jnkgwfpm6p'  # Merchant ID
+BRAINTREE_PUBLIC_KEY = 'w833sns8pmkp96bv'   # Public Key
+BRAINTREE_PRIVATE_KEY = 'ed6770cb7e817fd22d4779824451d190'  # Private key
 
 import braintree
 
