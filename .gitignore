@@ -117,3 +117,6 @@ cert.key
 secret_keys.txt
 myshop/secrete.txt
 myshop/static/
+
+
+*.mo
