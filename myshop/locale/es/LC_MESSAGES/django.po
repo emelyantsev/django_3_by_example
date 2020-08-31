@@ -8,15 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-28 11:39+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-08-31 10:37+0300\n"
+"PO-Revision-Date: 2020-08-31 07:41+0000\n"
+"Last-Translator: b'  <aleks.twin@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.3\n"
 
 #: cart/forms.py:13 cart/templates/cart/detail.html:16
 msgid "Quantity"
@@ -80,13 +81,47 @@ msgstr "Comprar"
 msgid "Coupon"
 msgstr "Cupón"
 
-#: myshop/settings.py:118
+#: myshop/settings.py:119
 msgid "English"
 msgstr "Inglés"
 
-#: myshop/settings.py:119
+#: myshop/settings.py:120
 msgid "Spanish"
 msgstr "Español"
+
+#: myshop/urls.py:26
+msgid "admin/"
+msgstr "admin"
+
+#: myshop/urls.py:27
+msgid "cart/"
+msgstr "carro"
+
+#: myshop/urls.py:28
+msgid "orders/"
+msgstr "pedidos"
+
+#: myshop/urls.py:29
+msgid "payment/"
+msgstr "pago"
+
+#: myshop/urls.py:30
+#, fuzzy
+#| msgid "Coupon"
+msgid "coupons/"
+msgstr "Cupón"
+
+#: payment/urls.py:8
+msgid "process/"
+msgstr "procesar"
+
+#: payment/urls.py:9
+msgid "done/"
+msgstr "completado"
+
+#: payment/urls.py:10
+msgid "canceled/"
+msgstr "cancelado"
 
 #: shop/templates/shop/base.html:7 shop/templates/shop/base.html:12
 msgid "My shop"
@@ -123,15 +158,15 @@ msgstr "Tu carro está vacío."
 msgid "Add to cart"
 msgstr "Añadir al carro"
 
-#: shop/templates/shop/product/list.html:5
-#: shop/templates/shop/product/list.html:25
+#: shop/templates/shop/product/list.html:6
+#: shop/templates/shop/product/list.html:26
 msgid "Products"
 msgstr "Productos"
 
-#: shop/templates/shop/product/list.html:11
+#: shop/templates/shop/product/list.html:12
 msgid "Categories"
 msgstr "Categorías"
 
-#: shop/templates/shop/product/list.html:14
+#: shop/templates/shop/product/list.html:15
 msgid "All"
 msgstr "Todos"
