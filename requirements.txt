@@ -14,6 +14,9 @@ cssselect2==0.3.0
 defusedxml==0.7.0rc1
 Django==3.0.8
 django-extensions==2.2.5
+django-localflavor==3.0.1
+django-parler==2.0.1
+django-rosetta==0.9.3
 django-taggit==1.2.0
 easy-thumbnails==2.7
 flower==0.9.3
@@ -26,11 +29,13 @@ mysqlclient==2.0.1
 oauthlib==3.1.0
 Pillow==7.0.0
 pkg-resources==0.0.0
+polib==1.1.0
 psycopg2-binary==2.8.4
 pycparser==2.20
 PyJWT==1.7.1
 pyOpenSSL==19.0.0
 Pyphen==0.9.5
+python-stdnum==1.14
 python3-openid==3.2.0
 pytz==2020.1
 redis==3.4.1
