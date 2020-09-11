@@ -10,6 +10,9 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from courses.models import Course
 
+
+
+
 class StudentRegistrationView(CreateView):
     
     template_name = 'students/student/registration.html'
@@ -54,7 +57,7 @@ class StudentCourseListView(LoginRequiredMixin, ListView):
 
 
 
-class StudentCourseDetailView(DetailView):
+class StudentCourseDetailView(LoginRequiredMixin, DetailView):
     
     model = Course
     template_name = 'students/course/detail.html'
@@ -64,9 +67,12 @@ class StudentCourseDetailView(DetailView):
         return qs.filter(students__in=[self.request.user])
 
     def get_context_data(self, **kwargs):
+        
         context = super().get_context_data(**kwargs)
         # get course object
+
         course = self.get_object()
+        
         if 'module_id' in self.kwargs:
             # get current module
             context['module'] = course.modules.get(
@@ -74,4 +80,5 @@ class StudentCourseDetailView(DetailView):
         else:
             # get first module
             context['module'] = course.modules.all()[0]
+
         return context
