@@ -122,3 +122,6 @@ myshop/static/
 *.mo
 
 educa/images
+educa/static
+educa/ssl
+educa/media

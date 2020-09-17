@@ -1,0 +1,20 @@
+
+sudo uwsgi --module=educa.wsgi:application \
+--env=DJANGO_SETTINGS_MODULE=educa.settings.pro \
+--master --pidfile=/tmp/project-master.pid \
+--http=127.0.0.1:8000 \
+--uid=1000 \
+--virtualenv=/home/aleksey/Coding/python/django_projects/myenv/
+
+
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ssl/educa.key -out ssl/educa.crt
+./manage.py enroll_reminder --days=0 --settings=educa.settings.pro
+
+
+to launch:
+
+uwsgi --ini config/uwsgi.ini
+daphne -u /tmp/daphne.sock educa.asgi:application
+
+./redis-server 
+
